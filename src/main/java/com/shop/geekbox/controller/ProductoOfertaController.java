@@ -18,8 +18,6 @@ public class ProductoOfertaController {
     
     @PostMapping(value = "/save")
     public ProductoOferta save(@RequestBody ProductoOferta productoOferta) {
-        System.out.println("Se crea un producto!!");
-        productoOferta.setIIdProdOfer(1);
         return productoOfertaRepository.save(productoOferta);
     }
 }
