@@ -1,5 +1,6 @@
 package com.shop.geekbox.model;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -14,6 +15,7 @@ import lombok.Setter;
 public class ProductoOferta {
 
     @Id
+    @Basic(optional = false)
     @Column(name="IIdProdOfer")
     private Integer IIdProdOfer;
 
