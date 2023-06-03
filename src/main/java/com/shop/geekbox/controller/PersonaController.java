@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.shop.geekbox.model.ProductoOferta;
-import com.shop.geekbox.repository.ProductoOfertaRepository;
+import com.shop.geekbox.model.Persona;
+import com.shop.geekbox.repository.PersonaRepository;
 
 @RestController
-@RequestMapping("/producto-oferta")
-public class ProductoOfertaController {
+@RequestMapping("/persona")
+public class PersonaController {
 
     @Autowired
-    ProductoOfertaRepository productoOfertaRepository;
-    
+    PersonaRepository personaRepository;
+
     @PostMapping(value = "")
-    public ProductoOferta save(@RequestBody ProductoOferta productoOferta) {
-        return productoOfertaRepository.save(productoOferta);
+    public Persona save(@RequestBody Persona persona) {
+        return personaRepository.save(persona);
     }
 }

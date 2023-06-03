@@ -17,20 +17,20 @@ public class ProductoOferta {
     @Id
     @Basic(optional = false)
     @Column(name="IIdProdOfer")
-    private Integer IIdProdOfer;
+    private Integer iidProdOfer;
 
     @Column(name="CNomProdOfer")
-    private String CNomProdOfer;
+    private String cnomProdOfer;
 
     @Column(name="DPrecioProdOfer")
-    private Long DPrecioProdOfer;
+    private Long dprecioProdOfer;
 
     @Column(name="ICantOfer")
-    private Integer ICantOfer;
+    private Integer icantOfer;
 
     @Column(name="CDescProdOfer")
-    private String CDescProdOfer;
+    private String cdescProdOfer;
 
     @Column(name="Persona_IIdPer")
-    private Integer Persona_IIdPer;
+    private Integer persona_IIdPer;
 }
