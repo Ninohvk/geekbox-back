@@ -4,6 +4,8 @@ import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,6 +33,7 @@ public class ProductoOferta {
     @Column(name="CDescProdOfer")
     private String cdescProdOfer;
 
-    @Column(name="Persona_IIdPer")
-    private Integer persona_IIdPer;
+    @ManyToOne
+    @JoinColumn(name = "Persona_IIdPer")
+    private Persona persona;
 }
