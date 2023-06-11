@@ -19,8 +19,7 @@ public class LoginController {
     PersonaRepository personaRepository;
 
     @PostMapping(value = "")
-    public ResponseEntity<Boolean> login(@RequestBody LoginDTO login) {
-        Boolean response = personaRepository.findByCemailAndCpass(login.getMail(), login.getPassword()) != null? true: false;
-        return ResponseEntity.ok().body(response);
+    public Boolean login(@RequestBody LoginDTO login) {
+        return personaRepository.findByCemailAndCpass(login.getMail(), login.getPassword()) != null;
     }
 }
