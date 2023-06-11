@@ -6,4 +6,5 @@ import com.shop.geekbox.model.ProductoOferta;
 
 public interface ProductoOfertaRepository extends CrudRepository<ProductoOferta, Integer>{
 
+    ProductoOferta findFirstByOrderByIidProdOferDesc();
 }

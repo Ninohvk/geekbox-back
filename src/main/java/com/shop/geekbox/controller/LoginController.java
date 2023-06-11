@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shop.geekbox.dto.LoginDTO;
+import com.shop.geekbox.model.Persona;
 import com.shop.geekbox.repository.PersonaRepository;
 
 @RestController
@@ -19,7 +20,7 @@ public class LoginController {
     PersonaRepository personaRepository;
 
     @PostMapping(value = "")
-    public Boolean login(@RequestBody LoginDTO login) {
-        return personaRepository.findByCemailAndCpass(login.getMail(), login.getPassword()) != null;
+    public Persona login(@RequestBody LoginDTO login) {
+        return personaRepository.findByCemailAndCpass(login.getMail(), login.getPassword());
     }
 }

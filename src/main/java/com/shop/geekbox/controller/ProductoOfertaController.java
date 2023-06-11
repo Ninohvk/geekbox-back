@@ -34,4 +34,9 @@ public class ProductoOfertaController {
     public ProductoOferta getById(@PathVariable("id") Integer id) {
         return productoOfertaRepository.findById(id).get();
     }
+
+    @GetMapping(value = "last-id")
+    public Integer getLastId() {
+        return productoOfertaRepository.findFirstByOrderByIidProdOferDesc().getIidProdOfer();
+    }
 }
