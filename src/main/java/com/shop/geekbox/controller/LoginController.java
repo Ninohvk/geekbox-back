@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.shop.geekbox.dto.LoginDTO;
 import com.shop.geekbox.repository.PersonaRepository;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/login")
 public class LoginController {
@@ -19,7 +18,6 @@ public class LoginController {
     @Autowired
     PersonaRepository personaRepository;
 
-    @CrossOrigin(origins = "*")
     @PostMapping(value = "")
     public ResponseEntity<Boolean> login(@RequestBody LoginDTO login) {
         Boolean response = personaRepository.findByCemailAndCpass(login.getMail(), login.getPassword()) != null? true: false;
